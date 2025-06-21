@@ -1,0 +1,139 @@
+/* Fondo general (heredado de tu estilo principal) */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6b8dd6, #a1b9ff);
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Título */
+h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Contenedor principal */
+#accountInfo {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Cada dato */
+#accountInfo p {
+  font-size: 18px;
+  margin: 18px 0;
+  line-height: 1.4;
+}
+
+#accountInfo strong {
+  color: #3498db;
+}
+
+/* Botón de cierre de sesión */
+button#logoutBtn {
+  margin-top: 35px;
+  padding: 14px 28px;
+  font-size: 17px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  display: block;
+  width: 100%;
+  max-width: 450px;
+}
+
+button#logoutBtn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 26px;
+  }
+  #accountInfo {
+    padding: 20px 25px;
+  }
+  #accountInfo p {
+    font-size: 16px;
+  }
+  button#logoutBtn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+
+
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #222;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+.sidebar a {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  transition: 0.2s;
+}
+.sidebar a:hover {
+  background: #575757;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+}
+.hamburger {
+  font-size: 40px;           /* Aumenta el tamaño */
+  cursor: pointer;
+  margin: 20px 0 0 20px;     /* Más separación */
+  color: #fff;               /* Color blanco para contraste */
+  background: #0078d7;       /* Fondo azul */
+  border-radius: 8px;        /* Bordes redondeados */
+  padding: 10px 16px;        /* Espaciado interno */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra para resaltar */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  #latencyPanel, .card {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .sidebar a {font-size: 16px;}
+}

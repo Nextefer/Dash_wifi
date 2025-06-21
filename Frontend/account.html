@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Cuenta</title>
+    <link rel="stylesheet" href="css/account.css" />
+</head>
+
+<body>
+    <!-- Botón hamburguesa -->
+    <span class="hamburger" id="hamburgerIcon" onclick="openSidebar()">&#9776;</span>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="account.html">Mi Cuenta</a>
+        <a href="#">Configuración</a>
+        <a href="#">Ayuda</a>
+        <a href="#" onclick="logout()">Cerrar sesión</a>
+    </div>
+
+    <h2>Mi Cuenta</h2>
+    <div id="accountInfo">
+        <p><strong>Nombre completo:</strong> <span id="fullName"></span></p>
+        <p><strong>Usuario:</strong> <span id="username"></span></p>
+        <p><strong>Correo electrónico:</strong> <span id="email"></span></p>
+    </div>
+
+    <button id="logoutBtn">Cerrar sesión</button>
+
+    <script src="js/account.js"></script>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- JS principal -->
+    <script src="js/dashboard.js"></script>
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("hamburgerIcon").style.display = "none"; // Oculta el icono
+        }
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("hamburgerIcon").style.display = "block"; // Muestra el icono
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+Dashescaneo/
+├── backend/
+│   ├── server.js
+│   └── users.json          # Base de datos simulada
+├── frontend/
+│   ├── index.html
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── js/
+│   │   ├── login.js
+│   │   ├── dashboard.js
+│   │   └── crypto-js.min.js
+│   └── css/
+│       └── styles.css
+├── docs/
+│   └── informe.pdf
+└── README.md

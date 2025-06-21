@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login WiFi Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Usuario" required /><br>
+        <input type="password" id="password" placeholder="Contraseña" required /><br>
+        <button type="submit">Entrar</button>
+    </form>
+    <p id="error" style="color: red;"></p>
+    <button class="secondary-btn" onclick="window.location.href='register.html'" type="button">Registrarse</button>
+    </div>
+     
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

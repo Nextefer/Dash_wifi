@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard WiFi</title>
+  <link rel="stylesheet" href="css/styledash.css" />
+</head>
+
+<body>
+
+  <!-- Botón hamburguesa -->
+  <span class="hamburger" id="hamburgerIcon" onclick="openSidebar()">&#9776;</span>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="account.html">Mi Cuenta</a>
+    <a href="#">Configuración</a>
+    <a href="#">Ayuda</a>
+    <a href="#" onclick="logout()">Cerrar sesión</a>
+  </div>
+
+  <h2>Dashboard de Monitoreo WiFi</h2>
+
+  <!-- Panel de latencia -->
+  <div id="latencyPanel">Latencia: -- ms</div>
+
+  <!-- Fondo para la gráfica de latencia -->
+  <div class="latency-chart-bg">
+    <canvas id="latencyChart" width="400" height="120"></canvas>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="container">
+
+    <!-- Tarjeta de protocolo -->
+    <div class="card">
+      <h3>Uso de Protocolos</h3>
+      <label for="protocolFilter">Filtrar por protocolo:</label>
+      <select id="protocolFilter">
+        <option value="all">Todos</option>
+        <option value="HTTP">HTTP</option>
+        <option value="HTTPS">HTTPS</option>
+        <option value="DNS">DNS</option>
+        <!-- Agrega más opciones según tus datos -->
+      </select>
+      <canvas id="protocolChart"></canvas>
+    </div>
+
+    <!-- Tarjeta de tráfico -->
+    <div class="card">
+      <h3>Tráfico por Dominio</h3>
+      <label for="domainFilter">Filtrar por dominio:</label>
+      <input type="text" id="domainFilter" placeholder="Escribe un dominio..." />
+      <canvas id="domainChart"></canvas>
+    </div>
+
+
+  </div>
+
+
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- JS principal -->
+  <script src="js/dashboard.js"></script>
+  <script>
+    function openSidebar() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("hamburgerIcon").style.display = "none"; // Oculta el icono
+    }
+    function closeSidebar() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("hamburgerIcon").style.display = "block"; // Muestra el icono
+    }
+  </script>
+</body>
+
+</html>
