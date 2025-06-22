@@ -15,7 +15,7 @@ const MAX_LATENCY_POINTS = 20; // Muestra los últimos 20 valores
 
 function medirLatenciaReal() {
   const start = performance.now();
-  return fetch("http://localhost:3000/ping")
+  return fetch("https://dash-wifi.onrender.com/ping")
     .then(() => {
       const latency = Math.floor(performance.now() - start);
       latencyPanel.textContent = `Latencia: ${latency} ms`;

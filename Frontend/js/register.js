@@ -17,7 +17,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
   const hashedPassword = CryptoJS.SHA256(password).toString();
 
-  const res = await fetch("http://localhost:3000/api/register", {
+  const res = await fetch("https://dash-wifi.onrender.com/api/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ fullName, username, email, password: hashedPassword })
